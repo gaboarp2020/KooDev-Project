@@ -19,6 +19,8 @@ header {
 
 header h1 {
     margin: auto;
+    position: relative;
+    right: 45px;
 }
 
 /* Main Stylesheets */
