@@ -1,0 +1,57 @@
+
+/* Header Stylesheets */
+
+/* Main Stylesheets */
+main {
+}
+
+.form {
+    padding: 25px 15px 25px 50px;
+    border: solid 1px rgb(230, 230, 230);
+    border-radius: 4px;
+    background-image: linear-gradient(to right, rgb(246, 246, 246), rgb(236, 236, 236));
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+form h1 {
+    margin: 0;
+}
+
+input {
+    width: 85%;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.primary-btn {
+    padding: 12px;
+    border: 1px solid #57a5e0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #57a5e0; 
+    transition: 0.5s;
+}
+
+.primary-btn:hover {
+    border: 1px solid #148ce7;
+    background-color: #148ce7; 
+}
+
+.secundary-btn {
+    padding: 10px;
+    border: 1px solid #8bc3ee;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #8bc3ee; 
+}
+
+/* Footer Stylesheets */
+footer {
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Enriqueta|Roboto');
+
+a, button, h1, h2, h3, h4, h5, input, label, nav {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'BebasNeueRegular';
+}
+
+header h1 span {
+    font-size: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, footer, label {
+    color: rgb(104, 104, 104);
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+.primary-btn {
+    color: aliceblue;
+}
+
+.secundary-btn {
+    color: white;
+}
+
+

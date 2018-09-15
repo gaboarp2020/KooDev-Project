@@ -1,0 +1,95 @@
+body {
+    display: grid;
+    min-height: 100vh;
+    overflow: hidden;
+    grid-template-rows: min-content 1fr min-content;
+    margin: 0;
+}
+
+/* Header Stylesheets */
+header {
+    grid-row: 1;
+    padding: 20px 40px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+
+header h1 {
+    margin: auto;
+}
+
+/* Main Stylesheets */
+main {
+    grid-row: 2;
+    padding: 0 20px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: 6%;
+}
+
+form {
+    grid-column: 2;
+    width: 405px;
+    height: 400px;
+    margin: auto;
+}
+
+.form {
+    display: grid;
+    grid-template-rows: repeat(7, min-content);
+    align-content: center;
+}
+
+.form h1 {
+    grid-row: 1;
+}
+
+.form hr {
+    grid-row: 2;
+}
+
+#uname-label {
+    grid-row: 3;
+}
+
+#uname-input {
+    grid-row: 4;
+}
+
+#pass-label {
+    grid-row: 5;
+}
+
+#pass-input {
+    grid-row: 6;
+}
+
+.login-buttons {
+    grid-row: 7;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+.login-buttons a {
+    margin: auto;
+}
+
+input {
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+
+/* Footer Stylesheets */
+footer {
+    grid-row: 3;
+    margin: auto;
+    padding: 20px;
+}
