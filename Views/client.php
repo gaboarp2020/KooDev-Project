@@ -34,13 +34,20 @@
         <div class="header">
             <img class="logo" src="../Images/logo.png" alt="Logo">
             <h1>KooDev <span>Developers & Consulting</span></h1>
+            <div class="user-info">
+                <!-- logged in user information -->
+                <?php  if (isset($_SESSION['username'])) : ?>
+                    <p>Bienvenido <strong><?php echo $_SESSION['username']; ?></strong> (admin)</p>
+                    <p> <a href="../index.php?logout='1'" style="color: red;">Cerrar sesión</a> </p>
+                <?php endif ?>
+            </div>
         </div>
         <nav>
-            <!-- logged in user information -->
-            <?php  if (isset($_SESSION['username'])) : ?>
-                <p>Bienvenido <strong><?php echo $_SESSION['username']; ?></strong>(user)</p>
-                <p> <a href="../index.php?logout='1'" style="color: red;">Cerrar sesión</a> </p>
-            <?php endif ?>
+            <ul class="menu">
+                <li>Home</li>
+                <li>Productos</li>
+                <li>Perfil</li>
+            </ul>     
         </nav>
     </header>
 
