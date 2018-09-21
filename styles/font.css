@@ -5,7 +5,7 @@ a, button, h1, h2, h3, h4, h5, input, label, nav {
 }
 
 p {
-    font-family: 'BebasNeueRegular';
+    font-family: 'BebasNeueRegular', serif, sans-serif;
 }
 
 header h1 span {
