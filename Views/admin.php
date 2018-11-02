@@ -38,7 +38,7 @@
                 <!-- logged in user information -->
                 <?php  if (isset($_SESSION['username'])) : ?>
                     <p>Bienvenido <strong><?php echo $_SESSION['username']; ?></strong> (admin)</p>
-                    <p> <a href="../index.php?logout='1'" style="color: red;">Cerrar sesión</a> </p>
+                    <p> <a href="../Controllers/logout.php" style="color: red;">Cerrar sesión</a> </p>
                 <?php endif ?>
             </div>
         </div>
