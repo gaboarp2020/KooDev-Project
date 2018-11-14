@@ -8,7 +8,7 @@
 
     
     // connect to the database
-    $db = mysqli_connect('localhost', 'root', '', 'koodev_users_db');
+    $db = mysqli_connect('localhost', 'root', '', 'db_koodev');
 
 
 
@@ -21,17 +21,18 @@
         $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
         $name = mysqli_real_escape_string($db, $_POST['name']);
         $last_name = mysqli_real_escape_string($db, $_POST['last_name']);
+        $phone = mysqli_real_escape_string($db, $_POST['phone']);
     
         // form validation: ensure that the form is correctly filled ...
         // by adding (array_push()) corresponding error unto $errors array
         if (empty($username)) { array_push($errors, "Ingrese el usuario"); }
         if (empty($email)) { array_push($errors, "Ingrese el email"); }
         if (empty($password_1)) { array_push($errors, "Ingrese la contraseña"); }
-        if ($password_1 != $password_2) {
-        array_push($errors, "La contraseña no coincide");
+        if ($password_1 != $password_2) { array_push($errors, "La contraseña no coincide"); }
         if (empty($name)) { array_push($errors, "Ingrese su nombre"); }
         if (empty($last_name)) { array_push($errors, "Ingrese su apellido"); }
-        }
+        if (empty($phone)) { array_push($errors, "Ingrese su teléfono"); }
+        
     
         // first check the database to make sure 
         // a user does not already exist with the same username and/or email
@@ -53,8 +54,8 @@
         if (count($errors) == 0) {
             $password = md5($password_1);//encrypt the password before saving in the database
     
-            $query = "INSERT INTO users (username, email, password, first_name, last_name) 
-                    VALUES('$username', '$email', '$password', '$name', '$last_name')";
+            $query = "INSERT INTO users (username, email, password, first_name, last_name, phone) 
+                    VALUES('$username', '$email', '$password', '$name', '$last_name', '$phone')";
             mysqli_query($db, $query);
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now logged in";
@@ -85,7 +86,7 @@
                 // header('location: admin.php');
                 $logged_in_user = mysqli_fetch_assoc($results);
 
-                if ($logged_in_user['user_type'] == 'admin') {
+                if ($logged_in_user['fk_user_type'] == 1) {
 
                     $_SESSION['username'] = $username;
                     $_SESSION['success']  = "You are now logged in";

@@ -25,6 +25,7 @@
         <div class="header">
             <img class="logo" src="../Images/logo.png" alt="Logo">
             <h1>KooDev <span>Developers & Consulting</span></h1>
+            <div class="user-info"></div>
         </div>
     </header>
 
@@ -33,24 +34,24 @@
             <form action="register.php" method="POST">
                 <?php include('../Controllers/errors.php'); ?>
                 <div class="form">
-                    <h1>Registro</h1>
-                    <hr>
-
-                    <h2>Cuenta</h2>
+                    <h2>Registro</h2>
+                    <h3>Cuenta</h3>
                     <label>Username</label>
-                    <input type="text" name="username" value="">
-                    <label>Email</label><br>
-                    <input type="email" name="email" value="">
+                    <input type="text" name="username" value="" required>
+                    <label>Email</label>
+                    <input type="email" name="email" value="" required>
                     <label>Password</label>
-                    <input type="password" name="password_1">
+                    <input type="password" name="password_1" required>
                     <label>Confirm password</label>
-                    <input type="password" name="password_2">
+                    <input type="password" name="password_2" required>
 
-                    <h2>Datos Personales</h2>
+                    <h3>Datos Personales</h3>
                     <label>Nombre</label>
-                    <input type="text" name="name" value="">
+                    <input type="text" name="name" value="" required>
                     <label>Apellido</label>
-                    <input type="text" name="last_name" value="">
+                    <input type="text" name="last_name" value="" required>
+                    <label>Teléfono</label>
+                    <input type="text" name="phone" value="" required>
 
                     <div class="register-buttons">
                         <button type="submit" class="primary-btn" name="reg_user">Registrarse</button>

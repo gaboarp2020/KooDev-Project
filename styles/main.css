@@ -1,14 +1,11 @@
 
 /* Header Stylesheets */
 .user-info {
-    min-width: 200px;
+    width: 91px;
     text-align: center;
 }
 
 /* Main Stylesheets */
-main {
-}
-
 .form {
     padding: 25px 15px 25px 50px;
     border: solid 1px rgb(230, 230, 230);
@@ -68,8 +65,6 @@ button {
 }
 
 /* Footer Stylesheets */
-footer {
-}
 
 /* Errors/Success Stylesheets */
 .error {
