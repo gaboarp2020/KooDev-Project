@@ -44,17 +44,30 @@
         </div>
         <nav>
             <ul class="menu">
-                <li>Home</li>
-                <li>Productos</li>
-                <li>Perfil</li>
+                <a href="#home"><li>Home</li></a>
+                <a href="#productos"><li>Productos</li></a>
+                <a href="#contacto"><li>Contacto</li></a>
             </ul>     
         </nav>
     </header>
 
     <main>
-        <div class="main">
+        <div class="container">
+            <section id="home">
+                <p>Plataformas Web <br><span>Desarrolladas a tu medida</span> <br> con tecnologia puntera, lideres en el mercado</p>
+            </section>
+            <section id="productos">
+                <h1>Productos</h1>
+                <div class="area-productos">
+                    <br>
+                    <?php
+                        include ('../Controllers/product.php');
+                    ?>
+                </div>
+            </section>
+            <section id="contacto">
 
-            
+            </section>
         </div>
     </main>
 

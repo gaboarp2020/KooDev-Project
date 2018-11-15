@@ -30,7 +30,7 @@
     </header>
 
     <main>
-        <div class="main">
+        <div class="container">
             <form action="register.php" method="POST">
                 <?php include('../Controllers/errors.php'); ?>
                 <div class="form">

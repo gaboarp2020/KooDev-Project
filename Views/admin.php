@@ -38,24 +38,36 @@
                 <!-- logged in user information -->
                 <?php  if (isset($_SESSION['username'])) : ?>
                     <p>Bienvenido <strong><?php echo $_SESSION['username']; ?></strong> (admin)</p>
-                    <p> <a href="../index.php?logout='1'" style="color: red;">Cerrar sesión</a> </p>
+                    <p> <a href="../Controllers/logout.php" style="color: red;">Cerrar sesión</a> </p>
                 <?php endif ?>
             </div>
         </div>
         <nav>
             <ul class="menu">
-                <li>Home</li>
-                <li>Productos</li>
-                <li>Perfil</li>
-                <li>Admin</li>
+                <a href="#home"><li>Home</li></a>
+                <a href="#productos"><li>Productos</li></a>
+                <a href="#contacto"><li>Contacto</li></a>
             </ul>     
         </nav>
     </header>
 
     <main>
-        <div class="main">
+        <div class="container">
+            <section id="home">
+                <p>Plataformas Web <br><span>Desarrolladas a tu medida</span> <br> con tecnologia puntera, lideres en el mercado</p>
+            </section>
+            <section id="productos">
+                <h1>Productos</h1>
+                <div class="area-productos">
+                    <br>
+                    <?php
+                        include ('../Controllers/product.php');
+                    ?>
+                </div>
+            </section>
+            <section id="contacto">
 
-            
+            </section>
         </div>
     </main>
 

@@ -29,12 +29,11 @@
     </header>
 
     <main>
-        <div class="main">
+        <div class="container">
             <form action="index.php" method="POST">
                 <?php include('Controllers/errors.php'); ?>
                 <div class="form">
-                    <h1>Login</h1>
-                    <hr>
+                    <h2>Login</h2>
                     <label id="uname-label" for="username">Usuario</label>
                     <input name="username" id="uname-input" type="text" required>
 

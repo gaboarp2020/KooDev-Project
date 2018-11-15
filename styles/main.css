@@ -1,11 +1,68 @@
 
 /* Header Stylesheets */
 .user-info {
-    width: 91px;
+    min-width: 91px;
     text-align: center;
+    margin-top: 35px;
+}
+
+.user-info p{
+    color: rgb(104, 104, 104);
 }
 
 /* Main Stylesheets */
+#home{
+    
+    background:
+    linear-gradient(
+        rgba(0, 46, 72, 0.45), 
+        rgba(0, 86, 136, 0.45)
+    ),
+    url("../Images/home.jpeg") no-repeat right top;
+    background-size: cover;
+    width: 100%;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    height: 80vh;
+}
+
+#home p{
+    color: #e2e2e2;
+    font-size: 24px;
+    margin-left: 20%;
+}
+
+#home span{
+    color: white;
+    font-size: 36px;
+}
+
+#productos{
+    margin-top: 20px;
+}
+
+#productos h1{
+    text-align: center;
+}
+
+.product-card{
+    width: 292px;
+    height: 476px;
+    padding: 15px;
+    border: 1px grey solid;
+    border-radius: 6px;
+    margin: 20px;
+}
+
+.product-card p{
+    text-align: justify;
+    color: rgb(104, 104, 104);
+    font-family: 'Roboto', sans-serif;
+}
+
 .form {
     padding: 25px 15px 25px 50px;
     border: solid 1px rgb(230, 230, 230);
@@ -65,6 +122,9 @@ button {
 }
 
 /* Footer Stylesheets */
+footer p {
+    text-align: center;
+}
 
 /* Errors/Success Stylesheets */
 .error {
