@@ -22,7 +22,7 @@
 
                     $_SESSION['username'] = $username;
                     $_SESSION['success']  = "Has iniciado sesión con éxito";
-                    header('location: Views/admin.php');		  
+                    header('location: Views/admin.php');
                 }else{
                     $_SESSION['username'] = $username;
                     $_SESSION['success']  = "Has iniciado sesión con éxito";

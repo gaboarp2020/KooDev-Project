@@ -11,6 +11,12 @@
     // Registro de usuario
     include 'sigin.php';
 
-    // Insicio de sesión
+    // Inicio de sesión
     include 'login.php';
+
+    // Registro de producto
+    include 'crear_producto.php';
+    
+    // Eliminación de producto
+    // include 'borrar_producto.php';
 ?>

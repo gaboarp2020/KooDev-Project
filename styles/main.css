@@ -25,8 +25,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 1;
-    height: 80vh;
+    height: 75vh;
 }
 
 #home p{
@@ -36,30 +35,112 @@
 }
 
 #home span{
+    font-family: 'BebasNeueRegular', serif, sans-serif;
     color: white;
     font-size: 36px;
 }
 
 #productos{
-    margin-top: 20px;
+    margin: 50px 0;
+    
 }
 
 #productos h1{
     text-align: center;
 }
 
+.product-edit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addProduct{
+    color: rgb(63, 63, 63);
+    cursor: pointer;
+}
+
+.product-edit i{
+    font-size: 16px; 
+    color: Dodgerblue;
+}
+
+.product-edit form{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 20px;
+    padding: 25px 15px 25px 50px;
+    border: solid 1px rgb(230, 230, 230);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-width: 200px;
+    width: 30%;
+    align-content: center;
+    clear:both;
+    transition: visibility 0s, opacity 0.5s linear;
+    opacity: 0; 
+    height: 0;
+    visibility: hidden;
+    margin-bottom: -65px;
+}
+
 .product-card{
-    width: 292px;
+    position: relative;
+    left: -4%;
+    width: 288px;
     height: 476px;
     padding: 15px;
     border: 1px grey solid;
     border-radius: 6px;
     margin: 20px;
+    margin-left: 45px;
 }
 
 .product-card p{
     text-align: justify;
     color: rgb(104, 104, 104);
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-card a{
+    position: absolute;
+    top: 95%;
+    color: rgb(97, 148, 207);
+    cursor: pointer;
+}
+
+.product-card a#deleteProduct{
+    left: 80%;
+    color: rgb(180, 39, 39);
+}
+
+.product-card img{
+    width: 290px;
+    height: 193px;
+}
+
+#contacto{
+    background-color: #639ad7;;
+    padding: 50px 0;
+}
+
+#contacto h1{
+    color: #f0f0f0;
+    text-align: center;
+}
+
+.branch_office{
+    position: relative;
+    left: -6%;
+    width: 292px;
+    height: 300px;
+    padding: 15px;
+    margin: 20px;
+}
+
+.branch_office p{
+    text-align: justify;
+    color: #f0f0f0;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -75,7 +156,7 @@ form h1 {
     margin: 0;
 }
 
-input {
+input, textarea {
     width: 85%;
     height: 30px;
     display: inline-block;
@@ -83,6 +164,11 @@ input {
     box-sizing: border-box;
     border-radius: 4px;
     text-indent: 10px;
+}
+
+textarea {
+    height: 80px;
+    margin-bottom: 20px;
 }
 
 button {
