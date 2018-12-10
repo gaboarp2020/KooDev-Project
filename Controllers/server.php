@@ -16,7 +16,4 @@
 
     // Registro de producto
     include 'crear_producto.php';
-    
-    // Eliminación de producto
-    // include 'borrar_producto.php';
 ?>

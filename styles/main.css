@@ -49,7 +49,7 @@
     text-align: center;
 }
 
-.product-edit{
+.product-edit {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,7 +65,7 @@
     color: Dodgerblue;
 }
 
-.product-edit form{
+.product-edit form {
     display: flex;
     flex-flow: column wrap;
     margin: 20px;
@@ -80,7 +80,7 @@
     transition: visibility 0s, opacity 0.5s linear;
     opacity: 0; 
     height: 0;
-    visibility: hidden;
+    visibility: visible;
     margin-bottom: -65px;
 }
 
@@ -102,14 +102,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.product-card a{
+.product-card a, .product-card span{
     position: absolute;
     top: 95%;
     color: rgb(97, 148, 207);
     cursor: pointer;
 }
 
-.product-card a#deleteProduct{
+.product-card .deleteProduct{
     left: 80%;
     color: rgb(180, 39, 39);
 }
@@ -117,6 +117,43 @@
 .product-card img{
     width: 290px;
     height: 193px;
+}
+
+.product-mod form {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 15px 28px;
+    padding: 30px;
+    border: solid 1px rgb(230, 230, 230);
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-width: 200px;
+    width: 30%;
+    align-content: center;
+}
+
+.product-mod {
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    visibility: hidden;
+    opacity: 0; 
+    height: 0;
+    visibility: visible;
+}
+
+.product-mod .register-buttons {
+    margin: auto;
+}
+
+.product-mod .register-buttons button {
+    margin-right: 5px;
 }
 
 #contacto{
@@ -148,7 +185,8 @@
     padding: 25px 15px 25px 50px;
     border: solid 1px rgb(230, 230, 230);
     border-radius: 4px;
-    background-image: linear-gradient(to right, rgb(246, 246, 246), rgb(236, 236, 236));
+    background-image: linear-gradient(to right, rgb(246, 2
+    46, 246), rgb(236, 236, 236));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 

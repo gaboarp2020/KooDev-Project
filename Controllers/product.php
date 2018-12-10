@@ -2,46 +2,53 @@
     $sql = "SELECT * FROM products";
     $sth = $db->query($sql);
     $result=mysqli_fetch_array($sth);
+
     for ($i=0; $i < $result; $i++) { 
+        
+        $id = $result['pk_product'];
         echo '<article class="product-card">';
-            echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['photo'] ).'"/>';
-            echo "<h2>";
-            echo $result['name'];
-            echo "</h2>";
-            echo "<p>";
-            echo $result['descrption'];
-            echo "</p>";
-            echo "<p>";
-            echo "Precio: desde ".$result['price']."$";
-            echo "</p>";
-            echo "<p>";
-            echo $result['pk_product'];
-            echo "</p>";
+        echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['photo'] ).'"/>';
+        echo "<h2>";
+        echo $result['name'];
+        echo "</h2>";
+        echo "<p>";
+        echo $result['descrption'];
+        echo "</p>";
+        echo "<p>";
+        echo "Precio: desde ".$result['price']."$";
+        echo "</p>";
 
-            if ($tipoUsuario == "admin") {
-                $id = $result['pk_product'];
-                echo "<a href='#'>Edit</a>";
-                // echo '<a id="deleteProduct" href="../Controllers/borrar_producto.php?delid=$id">Delete</a>';
-                if ($id==1){
-                    echo '<a id="deleteProduct" href="admin.php?action=delete&id=1">Delete</a>';
-                } else if ($id==2){
-                    echo '<a id="deleteProduct" href="admin.php?action=delete&id=2">Delete</a>';
-                } else if ($id==3){
-                    echo '<a id="deleteProduct" href="admin.php?action=delete&id=3">Delete</a>';
-                } else if ($id==4){
-                    echo '<a id="deleteProduct" href="admin.php?action=delete&id=4">Delete</a>';
-                } else if ($id==5){
-                    echo '<a id="deleteProduct" href="admin.php?action=delete&id=5">Delete</a>';
-                }
-                
+        echo '<div class="product-mod">';
+        echo '<form action="../Controllers/modificar_producto.php" method="POST" enctype="multipart/form-data">';
+        include('../Controllers/errors.php');
+        echo '<label>Foto</label>';
+        echo '<input type="file" name="foto" value="" required>';
+        echo '<label>Producto</label>';
+        echo '<input type="text" name="producto" value="" required>';
+        echo '<label>Descripción</label>';
+        echo '<textarea type="text" name="descripcion" required></textarea>';
+        echo '<label>Precio</label>';
+        echo '<input type="text" name="precio" required>';
+        echo '<div class="register-buttons">';
+        echo '<button type="submit" class="primary-btn" name="mod_product" value="' . $id . '">Registrar</button>';
+        echo '<button class="secundary-btn" type="reset">Cancelar</button>';
+        echo '</div>';
+        echo '</form>';
+        echo '</div>';
 
-                
+        if ($tipoUsuario == "admin") {
+            $modifyMsg = "¿Quiere modificar el producto?";
+            $deleteMsg = 'Are you sure to delete?';
+            echo '<span>Edit</span>';
+            //href="../Controllers/modificar_producto.php?action=modify&id=' . $id . '" onclick="return confirm('.$modifyMsg.')"
+            echo '<a class="deleteProduct" href="../Controllers/borrar_producto.php?action=delete&id=' . $id . '" onclick="return confirm('.$deleteMsg.')">Delete</a>';
+    
+        }
         echo '</article>';
 
         $result=mysqli_fetch_array($sth);
-        
     }
-}
 
     
+
 ?>
