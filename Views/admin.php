@@ -46,6 +46,7 @@
             <ul class="menu">
                 <a href="#home"><li>Home</li></a>
                 <a href="#productos"><li>Productos</li></a>
+                <a href="#sucursales"><li>Sucursales</li></a>
                 <a href="#contacto"><li>Contacto</li></a>
             </ul>     
         </nav>
@@ -86,6 +87,30 @@
                     $tipoUsuario = "admin";
                     include ('../Controllers/product.php');
                 ?>
+            </div>
+        </section>
+        <section id="sucursales">
+            <div class="container">
+                <h1>Sucursales</h1>
+                <form action="register.php" method="POST">
+                    <?php include('../Controllers/errors.php'); ?>
+                    <div class="form">
+                        <h2>Registro</h2>
+                        <h3>Sucursal</h3>
+                        <label>Nombre</label>
+                        <input type="text" name="name" value="" required>
+                        <label>Descripción</label>
+                        <textarea type="text" name="descripcion" required></textarea>
+                        <label>Teléfono</label>
+                        <input type="text" name="phone" value="" required>
+                        
+
+                        <div class="register-buttons">
+                            <button type="submit" class="primary-btn" name="reg_user">Registrarse</button>
+                            <button class="secundary-btn" type="reset">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </section>
         <section id="contacto">

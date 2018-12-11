@@ -35,8 +35,8 @@ main h1::after{
     margin-left: -15px;
 }
 
-#contacto h1::after{
-    border-top: 1px solid #cfcfcf;;
+#contacto h1::after, #sucursales h1::after{
+    border-top: 1px solid #cfcfcf;
 }
 
 a {

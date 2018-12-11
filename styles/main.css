@@ -156,8 +156,23 @@
     margin-right: 5px;
 }
 
+#sucursales {
+    background-color: #639ad7;
+    padding: 50px 0;
+}
+
+#sucursales .form {
+    background-color: white;
+    margin-top: -20px;
+}
+
+#sucursales h1{
+    color: #f0f0f0;
+    text-align: center;
+}
+
 #contacto{
-    background-color: #639ad7;;
+    background-color: #375475;
     padding: 50px 0;
 }
 
