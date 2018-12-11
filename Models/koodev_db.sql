@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-11-2018 a las 04:42:19
+-- Tiempo de generación: 11-12-2018 a las 03:20:28
 -- Versión del servidor: 10.1.35-MariaDB
 -- Versión de PHP: 7.2.9
 
@@ -34,16 +34,17 @@ CREATE TABLE `branch_offices` (
   `state` varchar(32) CHARACTER SET latin1 NOT NULL,
   `city` varchar(32) CHARACTER SET latin1 NOT NULL,
   `phone` varchar(32) CHARACTER SET latin1 NOT NULL,
-  `address` text CHARACTER SET latin1 NOT NULL
+  `address` text CHARACTER SET latin1 NOT NULL,
+  `email` varchar(30) COLLATE latin1_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `branch_offices`
 --
 
-INSERT INTO `branch_offices` (`pk_branch_office`, `country`, `state`, `city`, `phone`, `address`) VALUES
-(1, 'Venezuela', 'Distrito Capital', 'Caracas', '+58 (212) 662-9150', 'Urbanización Valle Abajo, Av. Caroní, Residencias San Judas, Apto 1, Parroquia San Pedro, Municipio Libertador, Caracas.'),
-(2, 'España', 'Cataluña', 'Barcelona', '+34 93 401 62 00', 'Carrer de Mandri, 3, 08022 Barcelona, España');
+INSERT INTO `branch_offices` (`pk_branch_office`, `country`, `state`, `city`, `phone`, `address`, `email`) VALUES
+(1, 'Venezuela', 'Distrito Capital', 'Caracas', '+58 (212) 662-9150', 'Urbanización Valle Abajo, Av. Caroní, Residencias San Judas, Apto 1, Parroquia San Pedro, Municipio Libertador, Caracas.', 'koodev@contact.com.ve'),
+(2, 'España', 'Cataluña', 'Barcelona', '+34 93 401 62 00', 'Carrer de Mandri, 3, 08022 Barcelona, España', 'koodev@contact.es');
 
 -- --------------------------------------------------------
 
@@ -159,7 +160,7 @@ ALTER TABLE `branch_offices`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `pk_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `pk_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `users`

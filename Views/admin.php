@@ -92,21 +92,27 @@
         <section id="sucursales">
             <div class="container">
                 <h1>Sucursales</h1>
-                <form action="register.php" method="POST">
+                <form action="admin.php" method="POST">
                     <?php include('../Controllers/errors.php'); ?>
                     <div class="form">
                         <h2>Registro</h2>
                         <h3>Sucursal</h3>
                         <label>Nombre</label>
-                        <input type="text" name="name" value="" required>
+                        <input type="text" name="nombre" value="" required>
                         <label>Descripción</label>
                         <textarea type="text" name="descripcion" required></textarea>
                         <label>Teléfono</label>
-                        <input type="text" name="phone" value="" required>
+                        <input type="text" name="telefono" value="" required>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1961.8984601596867!2d-66.8428237741782!3d10.437683723566366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2af7c510627903%3A0xf2cdcf47bfac6780!2sUniversidad+Nueva+Esparta!5e0!3m2!1ses!2sve!4v1544495161623" width="320" height="320" frameborder="0" style="border:0" allowfullscreen>
+                        </iframe>
+                        <label>Latitud</label>
+                        <input type="text" name="latitud" value="" required>
+                        <label>Longitud</label>
+                        <input type="text" name="longitud" value="" required>
                         
 
                         <div class="register-buttons">
-                            <button type="submit" class="primary-btn" name="reg_user">Registrarse</button>
+                            <button type="submit" class="primary-btn" name="reg_sucursal">Registrar</button>
                             <button class="secundary-btn" type="reset">Cancelar</button>
                         </div>
                     </div>

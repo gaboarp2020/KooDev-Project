@@ -16,4 +16,7 @@
 
     // Registro de producto
     include 'crear_producto.php';
+
+    // Registro de sucursal
+    include 'reg_sucursal.php';
 ?>
